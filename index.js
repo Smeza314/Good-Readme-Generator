@@ -1,14 +1,14 @@
 const inquirer = require('inquirer')
 const fs = require('fs')
-
-const gitHubQuestion =[
+// github username input
+const gitHubQuestion = [
   {
     type: 'input',
     name: 'username',
     message: 'What is your GitHub username?'
   }
 ]
-
+// email input
 const submitEmail = [
   {
     type: 'input',
@@ -16,8 +16,7 @@ const submitEmail = [
     message: 'What is your email?'
   }
 ]
-
-
+// questions about project
 const questions = [
   {
     type: 'input',
