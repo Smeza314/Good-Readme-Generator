@@ -20,6 +20,20 @@ function generateMarkdown(data) {
 
   #Usage
   ${data.usage}
+
+  #Tests
+  ${data.tests}
+
+  #Contributors
+  ${data.contributors}
+
+  #License
+  ${data.license}
+
+  #Questions
+  If you have any questions, you can contact the owner by clicking the email below.
+
+  ${data.email}
 `;
 }
 
