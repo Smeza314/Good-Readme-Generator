@@ -3,9 +3,17 @@ const fs = require('fs')
 
 const gitHubQuestion =[
   {
-    type: "input",
-    name: "username",
-    message: "What is your GitHub username?"
+    type: 'input',
+    name: 'username',
+    message: 'What is your GitHub username?'
+  }
+]
+
+const submitEmail = [
+  {
+    type: 'input',
+    name: 'email',
+    message: 'What is your email?'
   }
 ]
 
@@ -37,18 +45,18 @@ const questions = [
     message: 'what kind of test are ran on this app?'
   }
   {
-    type: "list",
-    name: "contributors",
-    message: "Are there any developers to contribute to your project?",
+    type: 'list',
+    name: 'contributors',
+    message: 'Are there any developers to contribute to your project?',
     choices: [
-      "Yes",
-      "No"
+      'Yes',
+      'No'
     ]
   }
   {
-    type: "list",
-    name: "license",
-    message: "What type of license would you like?",
+    type: 'list',
+    name: 'license',
+    message: 'What type of license would you like?',
     choices: [
 
     ]
