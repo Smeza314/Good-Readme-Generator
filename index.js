@@ -73,10 +73,10 @@ async function combinedData() {
       return responses = response
     })
     writeToFile("readmeGenerated.md", generateMarkdown(responses))
-  } 
+
   } catch (err) {
-  console.log(err);
+    console.log(err)
   }
 }
 
-// combinedData()
+combinedData()
