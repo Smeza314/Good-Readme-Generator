@@ -6,18 +6,18 @@ const generateMarkdown = require('./utils/generateMarkdown')
 
 // github username input
 
-const gitHubQuestion = [
-  {
-    type: 'input',
-    name: 'username',
-    message: 'What is your GitHub username?'
-  },
-  {
-    type: 'input',
-    name: 'email',
-    message: 'What is your GitHub email?'
-  }
-]
+// const gitHubQuestion = [
+//   {
+//     type: 'input',
+//     name: 'username',
+//     message: 'What is your GitHub username?'
+//   },
+//   {
+//     type: 'input',
+//     name: 'email',
+//     message: 'What is your GitHub email?'
+//   }
+// ]
 
 // questions about project
 const questions = [
@@ -63,20 +63,30 @@ const questions = [
       'none'
     ]
   },
+  {
+    type: 'input',
+    name: 'username',
+    message: 'What is your GitHub username?'
+  },
+  {
+    type: 'input',
+    name: 'email',
+    message: 'What is your GitHub email?'
+  },
 ]
 
 
 async function combinedData() {
   try {
 
-    await inquirer.prompt(gitHubQuestion).then(function (response) {
-      return responses = response
-    })
+    // await inquirer.prompt(gitHubQuestion).then(function (response) {
+    //   return responses = response
+    // })
 
     await inquirer.prompt(questions).then(function (response) {
       return responses = response
     })
-    writeToFile("readmeGenerated.md", generateMarkdown(responses))
+    writeToFile('readmeGenerated.md', generateMarkdown(responses))
   } catch (err) {
     console.log(err);
   }

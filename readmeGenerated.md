@@ -1,5 +1,5 @@
 
-  # Readme-Generator
+  # a
 
   # Table of Contents
   * [Project Description](#description)
@@ -9,15 +9,16 @@
   * [Contributors](#contributors)
   * [License](#license)
   * [Questions](#questions)
+  * [Contact](#contact)
 
   #Project Description
-  produces a readme.md about your project by asking you questions about it
+  a
 
   #Installation
-  node.js and inquirer
+  a
 
   #Usage
-  just type "node index.js" in index.js terminal
+  a
 
   #Tests
   undefined
@@ -29,6 +30,8 @@
   none
 
   #Questions
-  If you have any questions, you can contact the owner by clicking the email below.
+  If you have any questions, you can contact the owner by using the email below.
 
-  undefined
+  #Contact
+  Smeza314
+  sebastianmeza314@gmail.com

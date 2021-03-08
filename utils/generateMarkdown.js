@@ -11,6 +11,7 @@ function generateMarkdown(data) {
   * [Contributors](#contributors)
   * [License](#license)
   * [Questions](#questions)
+  * [Contact](#contact)
 
   #Project Description
   ${data.description}
@@ -33,6 +34,8 @@ function generateMarkdown(data) {
   #Questions
   If you have any questions, you can contact the owner by using the email below.
 
+  #Contact
+  Github username:${data.username}
   ${data.email}
 `;
 }
