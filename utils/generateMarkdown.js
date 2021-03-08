@@ -31,7 +31,7 @@ function generateMarkdown(data) {
   ${data.license}
 
   #Questions
-  If you have any questions, you can contact the owner by clicking the email below.
+  If you have any questions, you can contact the owner by using the email below.
 
   ${data.email}
 `;

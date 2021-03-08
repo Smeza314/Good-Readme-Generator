@@ -1,22 +1,24 @@
 const inquirer = require('inquirer')
 const fs = require('fs')
 const generateMarkdown = require('./utils/generateMarkdown')
+
+
+
 // github username input
+
 const gitHubQuestion = [
   {
     type: 'input',
     name: 'username',
     message: 'What is your GitHub username?'
-  }
-]
-// email input
-const submitEmail = [
+  },
   {
     type: 'input',
     name: 'email',
-    message: 'What is your email?'
+    message: 'What is your GitHub email?'
   }
 ]
+
 // questions about project
 const questions = [
   {
@@ -63,20 +65,27 @@ const questions = [
   },
 ]
 
+
 async function combinedData() {
   try {
+
     await inquirer.prompt(gitHubQuestion).then(function (response) {
-      return username = response.username
+      return responses = response
     })
 
     await inquirer.prompt(questions).then(function (response) {
       return responses = response
     })
     writeToFile("readmeGenerated.md", generateMarkdown(responses))
-
   } catch (err) {
-    console.log(err)
+    console.log(err);
   }
 }
+combinedData();
 
-combinedData()
+function writeToFile(fileName, data) {
+  fs.writeFile(fileName, data, err => {
+    if (err) { console.log(err) }
+    console.log("Data Entered!")
+  })
+}
