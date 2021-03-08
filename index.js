@@ -1,23 +1,10 @@
+// what the app requires
 const inquirer = require('inquirer')
 const fs = require('fs')
 const generateMarkdown = require('./utils/generateMarkdown')
 
 
 
-// github username input
-
-// const gitHubQuestion = [
-//   {
-//     type: 'input',
-//     name: 'username',
-//     message: 'What is your GitHub username?'
-//   },
-//   {
-//     type: 'input',
-//     name: 'email',
-//     message: 'What is your GitHub email?'
-//   }
-// ]
 
 // questions about project
 const questions = [
@@ -75,24 +62,20 @@ const questions = [
   },
 ]
 
-
+// Grabs the response from questions and combines it all to data
 async function combinedData() {
   try {
-
-    // await inquirer.prompt(gitHubQuestion).then(function (response) {
-    //   return responses = response
-    // })
-
     await inquirer.prompt(questions).then(function (response) {
       return responses = response
     })
+    //writes a new readme.md using generateMarkdown
     writeToFile('readmeGenerated.md', generateMarkdown(responses))
   } catch (err) {
     console.log(err);
   }
 }
 combinedData();
-
+// a function that calls on "writeToFile" properties and then uses fs.writeFile to create the new readme.md and consoles logs "data entered!" once it's done.
 function writeToFile(fileName, data) {
   fs.writeFile(fileName, data, err => {
     if (err) { console.log(err) }
